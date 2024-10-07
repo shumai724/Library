@@ -1,0 +1,93 @@
+Shift on 2024-10-01 (Tuesday):
+Planned employees: 5, Actual employees: 0
+
+Shift on 2024-10-02 (Wednesday):
+Planned employees: 6, Actual employees: 0
+
+Shift on 2024-10-03 (Thursday):
+Planned employees: 5, Actual employees: 0
+
+Shift on 2024-10-04 (Friday):
+Planned employees: 7, Actual employees: 0
+
+Shift on 2024-10-05 (Saturday):
+Planned employees: 5, Actual employees: 0
+
+Shift on 2024-10-06 (Sunday):
+Planned employees: 6, Actual employees: 0
+
+Shift on 2024-10-07 (Monday):
+Planned employees: 5, Actual employees: 0
+
+Shift on 2024-10-08 (Tuesday):
+Planned employees: 5, Actual employees: 0
+
+Shift on 2024-10-09 (Wednesday):
+Planned employees: 6, Actual employees: 0
+
+Shift on 2024-10-10 (Thursday):
+Planned employees: 5, Actual employees: 0
+
+Shift on 2024-10-11 (Friday):
+Planned employees: 5, Actual employees: 0
+
+Shift on 2024-10-12 (Saturday):
+Planned employees: 4, Actual employees: 0
+
+Shift on 2024-10-13 (Sunday):
+Planned employees: 6, Actual employees: 0
+
+Shift on 2024-10-14 (Monday):
+Planned employees: 5, Actual employees: 0
+
+Shift on 2024-10-15 (Tuesday):
+Planned employees: 5, Actual employees: 0
+
+Shift on 2024-10-16 (Wednesday):
+Planned employees: 6, Actual employees: 0
+
+Shift on 2024-10-17 (Thursday):
+Planned employees: 5, Actual employees: 0
+
+Shift on 2024-10-18 (Friday):
+Planned employees: 6, Actual employees: 0
+
+Shift on 2024-10-19 (Saturday):
+Planned employees: 5, Actual employees: 0
+
+Shift on 2024-10-20 (Sunday):
+Planned employees: 7, Actual employees: 0
+
+Shift on 2024-10-21 (Monday):
+Planned employees: 6, Actual employees: 0
+
+Shift on 2024-10-22 (Tuesday):
+Planned employees: 5, Actual employees: 0
+
+Shift on 2024-10-23 (Wednesday):
+Planned employees: 4, Actual employees: 0
+
+Shift on 2024-10-24 (Thursday):
+Planned employees: 5, Actual employees: 0
+
+Shift on 2024-10-25 (Friday):
+Planned employees: 6, Actual employees: 0
+
+Shift on 2024-10-26 (Saturday):
+Planned employees: 5, Actual employees: 0
+
+Shift on 2024-10-27 (Sunday):
+Planned employees: 6, Actual employees: 0
+
+Shift on 2024-10-28 (Monday):
+Planned employees: 5, Actual employees: 0
+
+Shift on 2024-10-29 (Tuesday):
+Planned employees: 5, Actual employees: 0
+
+Shift on 2024-10-30 (Wednesday):
+Planned employees: 4, Actual employees: 0
+
+Shift on 2024-10-31 (Thursday):
+Planned employees: 6, Actual employees: 0
+
