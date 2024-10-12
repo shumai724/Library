@@ -64,8 +64,8 @@ int main(){
 
 //ここで根に関する情報を持たせて出力
     rep(i,armspoint - 1){
-        cout << i << " " << 2;
-        file1 << i << " " << 2;
+        cout << i << " " << 2 << endl;
+        file1 << i << " " << 2 << endl;
     }
 
 
@@ -84,14 +84,11 @@ int main(){
     }
 
 //X方向とY方向に移動させるときのベクトルを作る
-    vector<int> DX = {0,1,0,-1};
-    vector<int> DY = {1,0,-1,0};
-    vector<char> DIR = {'R','D','L','U'};
+    vector<int> DX = {0,1,0,-1,0};
+    vector<int> DY = {1,0,-1,0,0};
+    vector<char> DIR = {'R','D','L','U','.'};
 
-//訪問したことがあるかどうかを判定するvisited
-    vector<vector<bool>> visited(N,vector<bool>(N,false));
-
-    int remain_tako = catch_point.size();
+    int remain_tako = M;
 
     while(remain_tako != 0){
         int point = 0;
@@ -111,59 +108,6 @@ int main(){
                 if(xx < 0 || xx >= N)continue;
                 if(yy < 0 || yy >= N)continue;
 
-                //今何も持っていなくて、今の座標にたこ焼きがある場合、
-                //つかんだことにして得点を与える
-
-                if(Holding[i]==false){
-                    if(S[xx][yy]=='1' && T[xx][yy]=='0'){
-                        score += 1000;
-                    }
-                }
-
-                //今たこ焼きをつかんでいて、今の座標にたこ焼きを落としたい場合
-                //落としたことにして得点を与える
-
-                if(Holding[i] == true){
-                    if(S[xx][yy]=='0' && T[xx][yy]=='1'){
-                        score += 1000;
-                    }
-                }
-                //どっちにも引っかからなかった場合どうするか
-                //まだ訪れていない地点であれば得点を少し与える
-                //ただ、分断されるとどうしようもなさそう
-
-                if(visited[xx][yy]==false){
-                    score += 10;
-                }
-                //スコアが0の時に最寄りのたこやきがあるところにいきたい
-
-                if(score==0){
-                    int dis = 1e9;
-
-                    if(Holding[i]==false){
-                        
-                        for(int j = 0; j < catch_point.size(); j++){
-                            int ca_x = catch_point[j].first;
-                            int ca_y = catch_point[j].second;
-                            int d = abs(xx - ca_x) + abs(yy - ca_y);
-                            dis = min(dis,d);
-                        }
-
-                    }else{
-
-                        for(int j = 0 ; j < drop_point.size(); j++){
-                            int dr_x = drop_point[j].first;
-                            int dr_y = drop_point[j].second;
-                            int d = abs(xx - dr_x) + abs(yy - dr_y);
-                            dis = min(dis,d);
-                        }
-                    }
-
-                    score += 10/(dis+1);
-
-
-
-                }
 
 
 
