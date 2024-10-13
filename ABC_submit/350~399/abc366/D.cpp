@@ -12,7 +12,7 @@ using ll  = long long;
 int main(){
     int N;
     cin >> N;
-    vector<vector<vector<int>>> A(N,vector<vector<int>>(N,vector<int>(N)));
+    vector<vector<vector<int>>> A(N,vector<vector<int>>(N,vector<int>(N,0)));
 
     rep(i,N){
         rep(j,N){
@@ -43,7 +43,7 @@ int main(){
         lx--,ly--,lz--;
         ll ans = B[rx][ry][rz] - B[lx][ry][rz] - B[rx][ly][rz] -
                  B[rx][ry][lz] + B[lx][ly][rz] + B[lx][ry][lz] +
-                 B[rx][ly][lz] + B[lx][ly][lz];
+                 B[rx][ly][lz] - B[lx][ly][lz];
 
         cout << ans << endl;
 
