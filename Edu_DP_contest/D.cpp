@@ -2,9 +2,10 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+using ll = long long;
 
 int main(){
-    int N, W, weight[109],value[109],dp[109][100009];
+    ll N, W, weight[109],value[109],dp[109][100009];
     cin >> N >> W;
 
     for(int i = 1; i <= N; i++){

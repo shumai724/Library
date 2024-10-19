@@ -8,50 +8,50 @@ using ll  = long long;
 #define SORT(a) sort(a.begin(), a.end())
 #define REV(a) reverse(a.begin(),a.end())
 
+vector<vector<int>> G;
+vector<int> ans;
+
+void dfs(int crr,int pre){
+    ans.push_back(crr);
+    for(int nxt:G[crr]){
+        if(nxt != pre){
+            dfs(nxt,crr);
+            ans.push_back(crr);
+
+        }
+    }
+
+
+}
 
 int main(){
     int N;
     cin >> N;
-    vector<vector<vector<int>>> A(N,vector<vector<int>>(N,vector<int>(N)));
+    G.resize(N+1);
+    vector<int> A(N-1),B(N-1);
+    rep(i,N-1)cin >> A[i] >> B[i];
 
-    rep(i,N){
-        rep(j,N){
-            rep(k,N){
-                cin >> A[i][j][k];
-            }
-        }
+    vector<vector<int>> G(N+1);
+
+    rep(i,N-1){
+        G[A[i]].push_back(B[i]);
+        G[B[i]].push_back(A[i]);
     }
 
-    vector<vector<vector<ll>>> B(N+1,vector<vector<ll>>(N+1,vector<ll>(N+1)));
+    for(int i = 1; i <= N; i++)SORT(G[i]);
 
-    rep(i,N){
-        rep(j,N){
-            rep(k,N){
-                B[i+1][j+1][k+1] = B[i][j+1][k+1] + B[i+1][j][k+1] + B[i+1][j+1][k] 
-                                  - B[i][j][k+1] - B[i][j+1][k] - B[i+1][j][k]
-                                  + B[i][j][k] + A[i][j][k]; 
-            }
-        }
+    dfs(1,-1);
+
+    for(int i = 0 ; i < ans.size(); i++){
+        cout << ans[i];
+        if(i != ans.size()-1)cout << " ";
     }
 
-    int Q;
-    cin >> Q;
-
-    for(int i = 0 ; i < Q; i++){
-        int lx,rx,ly,ry,lz,rz;
-        cin >> lx >> rx >> ly >> ry >> lz >> rz;
-        lx--,ly--,lz--;
-        ll ans = B[rx][ry][rz] - B[lx][ry][rz] - B[rx][ly][rz] -
-                 B[rx][ry][lz] + B[lx][ly][rz] + B[lx][ry][lz] +
-                 B[rx][ly][lz] + B[lx][ly][lz];
-
-        cout << ans << endl;
-
-    }
+    cout << "\n";
     return 0;
 
 
 
 
-
+    
 }
