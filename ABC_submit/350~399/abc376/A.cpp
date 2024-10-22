@@ -14,6 +14,22 @@ template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return true
 
 
 int main(){
+    int N,C;
+    cin >> N >> C;
+    vector<int> T(N);
+    rep(i,N)cin >> T[i];
+
+    int time = 0;
+
+    int ans = 0;
+    for(int i = 0 ; i < N; i++){
+        if(time <= T[i]){
+            time = T[i] + C;
+            ans += 1;
+        }
+    }
+
+    cout << ans << "\n";
 
 
 }
